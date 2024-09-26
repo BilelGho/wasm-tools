@@ -1265,7 +1265,7 @@ impl<'a> BinaryReader<'a> {
 
             0x0b => visitor.visit_v128_store(self.read_memarg(4)?),
             0x0c => visitor.visit_v128_const(self.read_v128()?),
-            0x0d => panic!("unsupported")
+            0x0d => panic!("unsupported"),
 
             0x0e => visitor.visit_i8x16_swizzle(),
             0x0f => visitor.visit_i8x16_splat(),
